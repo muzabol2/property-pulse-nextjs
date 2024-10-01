@@ -1,16 +1,18 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { ProfileDefaultImage } from '@/assets';
 import { NotificationBell } from './NotificationBell';
 
-const UserMenu = ({ isOpen, setIsOpen }) => {
+const ProfileDropdown = ({ isOpen, setIsOpen }) => {
   return (
     <div className="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
       <NotificationBell />
       <div className="relative ml-3">
         <button
           type="button"
-          className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none"
+          className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none hover:bg-gray-700"
           onClick={() => setIsOpen((prev) => !prev)}
         >
           <Image
@@ -27,17 +29,17 @@ const UserMenu = ({ isOpen, setIsOpen }) => {
           >
             <Link
               href="/profile"
-              className="block px-4 py-2 text-sm text-gray-700"
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
             >
               Your Profile
             </Link>
             <Link
               href="/properties/saved"
-              className="block px-4 py-2 text-sm text-gray-700"
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
             >
               Saved Properties
             </Link>
-            <button className="block px-4 py-2 text-sm text-gray-700">
+            <button className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
               Sign Out
             </button>
           </div>
@@ -47,4 +49,4 @@ const UserMenu = ({ isOpen, setIsOpen }) => {
   );
 };
 
-export { UserMenu };
+export { ProfileDropdown };

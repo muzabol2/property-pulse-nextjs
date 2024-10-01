@@ -6,7 +6,7 @@ import { Logo } from './Logo';
 import { MobileMenuButton } from './MobileMenuButton';
 import { DesktopMenu } from './DesktopMenu';
 import { MobileMenu } from './MobileMenu';
-import { UserMenu } from './UserMenu';
+import { ProfileDropdown } from './ProfileDropdown';
 import { LoginButton } from './LoginButton';
 import { useMediaQuery } from '@/hooks';
 
@@ -30,7 +30,7 @@ const Navbar = () => {
           </div>
 
           {isLoggedIn ? (
-            <UserMenu
+            <ProfileDropdown
               isOpen={isProfileMenuOpen}
               setIsOpen={setIsProfileMenuOpen}
             />

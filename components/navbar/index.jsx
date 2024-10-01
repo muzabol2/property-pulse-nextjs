@@ -13,10 +13,14 @@ import { useMediaQuery } from '@/hooks';
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
-  
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const pathName = usePathname();
   const isMobile = useMediaQuery('(max-width: 768px)');
+
+  const handleLogin = () => {
+    setIsLoggedIn((prev) => !prev);
+  };
 
   return (
     <nav className="bg-blue-700 border-b border-blue-500">
@@ -33,15 +37,20 @@ const Navbar = () => {
             <ProfileDropdown
               isOpen={isProfileMenuOpen}
               setIsOpen={setIsProfileMenuOpen}
+              onLogout={handleLogin}
             />
           ) : (
-            <LoginButton isVisible={!isMobile} />
+            <LoginButton isVisible={!isMobile} onLogin={handleLogin} />
           )}
         </div>
       </div>
 
       {isMobileMenuOpen && isMobile && (
-        <MobileMenu pathName={pathName} isLoggedIn={isLoggedIn} />
+        <MobileMenu
+          pathName={pathName}
+          isLoggedIn={isLoggedIn}
+          onLogin={handleLogin}
+        />
       )}
     </nav>
   );

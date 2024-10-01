@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { LoginButton } from './LoginButton';
 
-const MobileMenu = ({ pathName, isLoggedIn }) => {
+const MobileMenu = ({ pathName, isLoggedIn, onLogin }) => {
   return (
     <div id="mobile-menu">
       <div className="space-y-1 px-2 pb-3 pt-2">
@@ -28,7 +28,7 @@ const MobileMenu = ({ pathName, isLoggedIn }) => {
           </Link>
         )}
 
-        {!isLoggedIn && <LoginButton />}
+        {!isLoggedIn && <LoginButton onLogin={onLogin}/>}
       </div>
     </div>
   );

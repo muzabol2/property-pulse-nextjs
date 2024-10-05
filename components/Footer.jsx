@@ -1,3 +1,5 @@
+'use client';
+
 import { LogoImage2 } from '@/assets';
 import Image from 'next/image';
 import Link from 'next/link';

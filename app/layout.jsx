@@ -1,5 +1,5 @@
 import '@/assets/styles/globals.css';
-import { Navbar } from '@/components';
+import { Footer, Navbar } from '@/components';
 
 export const metadata = {
   title: 'Property-Pulse-App',
@@ -11,7 +11,8 @@ const RootLayout = ({ children }) => {
     <html>
       <body>
         <Navbar />
-        <main>{children}</main>
+        <main className="pt-20">{children}</main>
+        <Footer />
       </body>
     </html>
   );

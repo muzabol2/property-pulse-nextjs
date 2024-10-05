@@ -28,7 +28,7 @@ const MobileMenu = ({ pathName, isLoggedIn, onLogin }) => {
           </Link>
         )}
 
-        {!isLoggedIn && <LoginButton onLogin={onLogin}/>}
+        {!isLoggedIn && <LoginButton onLogin={onLogin} />}
       </div>
     </div>
   );

@@ -1,12 +1,13 @@
 'use client';
 
-import { Hero, InfoBoxes } from '@/components';
+import { Hero, HomeProperties, InfoBoxes } from '@/components';
 
 const HomePage = () => {
   return (
     <>
       <Hero />
       <InfoBoxes />
+      <HomeProperties />
     </>
   );
 };

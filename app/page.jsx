@@ -1,5 +1,3 @@
-'use client';
-
 import { Hero, HomeProperties, InfoBoxes } from '@/components';
 
 const HomePage = () => {

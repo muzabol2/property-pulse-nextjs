@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ProfileDefaultImage } from '@/assets';
 import { NotificationBell } from './NotificationBell';
 
-const ProfileDropdown = ({ isOpen, setIsOpen, onLogout }) => {
+const ProfileDropdown = ({ isOpen, setIsOpen, signOut }) => {
   return (
     <div className="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
       <NotificationBell />
@@ -42,7 +42,7 @@ const ProfileDropdown = ({ isOpen, setIsOpen, onLogout }) => {
               </Link>
               <button
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-left"
-                onClick={onLogout}
+                onClick={signOut}
               >
                 Sign Out
               </button>

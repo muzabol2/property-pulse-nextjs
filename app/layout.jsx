@@ -1,9 +1,9 @@
-import '@/assets/styles/globals.css';
-import { AuthProvider, Footer, Navbar } from '@/components';
+import "@/assets/styles/globals.css";
+import { AuthProvider, Footer, Navbar } from "@/components";
 
 export const metadata = {
-  title: 'Property-Pulse-App',
-  description: 'App to manage selling and buying properties',
+  title: "Property-Pulse-App",
+  description: "App to manage selling and buying properties",
 };
 
 const RootLayout = ({ children }) => {

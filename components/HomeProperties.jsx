@@ -1,7 +1,7 @@
-import { PropertyCard } from './PropertyCard';
-import Link from 'next/link';
-import { connectDB } from '@/config';
-import { Property } from '@/models';
+import { PropertyCard } from "./PropertyCard";
+import Link from "next/link";
+import { connectDB } from "@/config";
+import { Property } from "@/models";
 
 const HomeProperties = async () => {
   await connectDB();

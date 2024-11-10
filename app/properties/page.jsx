@@ -1,6 +1,6 @@
-import { PropertyCard } from '@/components';
-import { connectDB } from '@/config';
-import { Property } from '@/models';
+import { PropertyCard } from "@/components";
+import { connectDB } from "@/config";
+import { Property } from "@/models";
 
 const PropertiesPage = async () => {
   await connectDB();

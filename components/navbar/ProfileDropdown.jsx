@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { ProfileDefaultImage } from '@/assets';
-import { NotificationBell } from './NotificationBell';
+import Image from "next/image";
+import Link from "next/link";
+import { ProfileDefaultImage } from "@/assets";
+import { NotificationBell } from "./NotificationBell";
 
 const ProfileDropdown = ({ isOpen, setIsOpen, signOut }) => {
   return (

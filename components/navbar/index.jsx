@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
-import { signIn, signOut, getProviders, useSession } from 'next-auth/react';
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { signIn, signOut, getProviders, useSession } from "next-auth/react";
 
-import { useMediaQuery } from '@/hooks';
-import { Logo } from './Logo';
-import { MobileMenuButton } from './MobileMenuButton';
-import { DesktopMenu } from './DesktopMenu';
-import { MobileMenu } from './MobileMenu';
-import { ProfileDropdown } from './ProfileDropdown';
-import { LoginButton } from './LoginButton';
+import { useMediaQuery } from "@/hooks";
+import { Logo } from "./Logo";
+import { MobileMenuButton } from "./MobileMenuButton";
+import { DesktopMenu } from "./DesktopMenu";
+import { MobileMenu } from "./MobileMenu";
+import { ProfileDropdown } from "./ProfileDropdown";
+import { LoginButton } from "./LoginButton";
 
 const Navbar = () => {
   const { data: session } = useSession();
@@ -20,7 +20,7 @@ const Navbar = () => {
   const [providers, setProviders] = useState(null);
 
   const pathName = usePathname();
-  const isMobile = useMediaQuery('(max-width: 768px)');
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   useEffect(() => {
     const setAuthProviders = async () => {
@@ -49,7 +49,6 @@ const Navbar = () => {
               signOut={signOut}
             />
           ) : (
-
             <LoginButton
               isVisible={!isMobile}
               providers={providers}

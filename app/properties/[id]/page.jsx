@@ -1,8 +1,8 @@
-import { PropertyDetails, PropertyHeaderImage } from '@/components';
-import { connectDB } from '@/config';
-import { Property } from '@/models';
-import Link from 'next/link';
-import { FaArrowLeft } from 'react-icons/fa';
+import { PropertyDetails, PropertyHeaderImage } from "@/components";
+import { connectDB } from "@/config";
+import { Property } from "@/models";
+import Link from "next/link";
+import { FaArrowLeft } from "react-icons/fa";
 
 const PropertyPage = async ({ params }) => {
   await connectDB();

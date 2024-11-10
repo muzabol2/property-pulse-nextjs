@@ -1,4 +1,4 @@
-import { InfoBox } from './InfoBox';
+import { InfoBox } from "./InfoBox";
 
 const InfoBoxes = () => {
   return (
@@ -8,9 +8,9 @@ const InfoBoxes = () => {
           <InfoBox
             heading="For Renters"
             buttonInfo={{
-              text: 'Browse Properties',
-              href: '/properties',
-              backgroundColor: 'bg-black',
+              text: "Browse Properties",
+              href: "/properties",
+              backgroundColor: "bg-black",
             }}
           >
             Find your dream rental property. Bookmark properties and contact
@@ -20,9 +20,9 @@ const InfoBoxes = () => {
             heading="For Property Owners"
             backgroundColor="bg-blue-100"
             buttonInfo={{
-              text: 'Add Property',
-              href: '/properties/add',
-              backgroundColor: 'bg-blue-500',
+              text: "Add Property",
+              href: "/properties/add",
+              backgroundColor: "bg-blue-500",
             }}
           >
             List your properties and reach potential tenants. Rent as an airbnb

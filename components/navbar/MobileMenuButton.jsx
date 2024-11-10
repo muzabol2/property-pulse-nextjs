@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { HamburgerIcon } from '@/assets';
+import { HamburgerIcon } from "@/assets";
 
 const MobileMenuButton = ({ setIsMobileMenuOpen }) => (
   <div className="absolute inset-y-0 left-0 flex items-center md:hidden">

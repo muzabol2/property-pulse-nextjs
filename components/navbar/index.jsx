@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { usePathname } from 'next/navigation';
-import { Logo } from './Logo';
-import { MobileMenuButton } from './MobileMenuButton';
-import { DesktopMenu } from './DesktopMenu';
-import { MobileMenu } from './MobileMenu';
-import { ProfileDropdown } from './ProfileDropdown';
-import { LoginButton } from './LoginButton';
-import { useMediaQuery } from '@/hooks';
+import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { Logo } from "./Logo";
+import { MobileMenuButton } from "./MobileMenuButton";
+import { DesktopMenu } from "./DesktopMenu";
+import { MobileMenu } from "./MobileMenu";
+import { ProfileDropdown } from "./ProfileDropdown";
+import { LoginButton } from "./LoginButton";
+import { useMediaQuery } from "@/hooks";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,7 +16,7 @@ const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const pathName = usePathname();
-  const isMobile = useMediaQuery('(max-width: 768px)');
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   const handleLogin = () => {
     setIsLoggedIn((prev) => !prev);

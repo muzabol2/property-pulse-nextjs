@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { LogoImage } from '@/assets';
+import Image from "next/image";
+import Link from "next/link";
+import { LogoImage } from "@/assets";
 
 const Logo = () => {
   return (

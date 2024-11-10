@@ -1,12 +1,12 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 let connected = false;
 
 const connectDB = async () => {
-  mongoose.set('strictQuery', true);
+  mongoose.set("strictQuery", true);
 
   if (connected) {
-    console.log('Already connected to database');
+    console.log("Already connected to database");
     return;
   }
 

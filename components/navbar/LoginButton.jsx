@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { FaGoogle } from 'react-icons/fa';
+import { FaGoogle } from "react-icons/fa";
 
 const LoginButton = ({ isVisible = true, onLogin }) => {
   if (!isVisible) {

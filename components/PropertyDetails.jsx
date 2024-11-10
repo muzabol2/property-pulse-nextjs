@@ -5,7 +5,7 @@ import {
   FaTimes,
   FaCheck,
   FaMapMarker,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 const PropertyDetails = ({ property }) => {
   return (
@@ -16,7 +16,7 @@ const PropertyDetails = ({ property }) => {
         <div className="text-gray-500 mb-4 flex align-middle justify-center md:justify-start">
           <FaMapMarker className="text-orange-700 mt-1 mr-1" />
           <p className="text-orange-700">
-            {property.location.street}, {property.location.city}{' '}
+            {property.location.street}, {property.location.city}{" "}
             {property.location.state}
           </p>
         </div>
@@ -62,16 +62,16 @@ const PropertyDetails = ({ property }) => {
         <h3 className="text-lg font-bold mb-6">Description & Details</h3>
         <div className="flex justify-center gap-4 text-blue-500 mb-4 text-xl space-x-9">
           <p>
-            <FaBed className="inline-block mr-2" /> {property.beds}{' '}
+            <FaBed className="inline-block mr-2" /> {property.beds}{" "}
             <span className="hidden sm:inline">Beds</span>
           </p>
           <p>
-            <FaBath className="inline-block mr-2" /> {property.baths}{' '}
+            <FaBath className="inline-block mr-2" /> {property.baths}{" "}
             <span className="hidden sm:inline">Baths</span>
           </p>
           <p>
             <FaRulerCombined className="inline-block mr-2" />
-            {property.square_feet}{' '}
+            {property.square_feet}{" "}
             <span className="hidden sm:inline">sqft</span>
           </p>
         </div>

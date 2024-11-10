@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { NotificationBellIcon } from '@/assets';
+import Link from "next/link";
+import { NotificationBellIcon } from "@/assets";
 
 const NotificationBell = () => (
   <Link href="/messages" className="relative group">

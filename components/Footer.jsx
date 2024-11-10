@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { LogoImage2 } from '@/assets';
-import Image from 'next/image';
-import Link from 'next/link';
+import { LogoImage2 } from "@/assets";
+import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

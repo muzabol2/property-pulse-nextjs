@@ -19,6 +19,7 @@ const Navbar = () => {
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
   const [providers, setProviders] = useState(null);
 
+  const profileImage = session?.user?.image;
   const pathName = usePathname();
   const isMobile = useMediaQuery("(max-width: 768px)");
 
@@ -44,6 +45,7 @@ const Navbar = () => {
 
           {session ? (
             <ProfileDropdown
+              profileImage={profileImage}
               isOpen={isProfileMenuOpen}
               setIsOpen={setIsProfileMenuOpen}
               signOut={signOut}

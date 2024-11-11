@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ProfileDefaultImage } from "@/assets";
 import { NotificationBell } from "./NotificationBell";
 
-const ProfileDropdown = ({ isOpen, setIsOpen, signOut }) => {
+const ProfileDropdown = ({ profileImage, isOpen, setIsOpen, signOut }) => {
   return (
     <div className="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
       <NotificationBell />
@@ -17,7 +17,9 @@ const ProfileDropdown = ({ isOpen, setIsOpen, signOut }) => {
         >
           <Image
             className="h-8 w-8 rounded-full"
-            src={ProfileDefaultImage}
+            src={profileImage || ProfileDefaultImage}
+            width={40}
+            height={40}
             alt="profile image"
           />
         </button>

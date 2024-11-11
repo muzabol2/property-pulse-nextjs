@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-const DesktopMenu = ({ pathName, isLoggedIn }) => {
+const DesktopMenu = ({ pathName, session }) => {
   return (
     <div className="hidden md:ml-6 md:block">
       <div className="flex space-x-2">
@@ -18,7 +18,7 @@ const DesktopMenu = ({ pathName, isLoggedIn }) => {
         >
           Properties
         </Link>
-        {isLoggedIn && (
+        {session && (
           <Link
             href="/properties/add"
             className={`text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 ${pathName === "/properties/add" && "bg-black"}`}

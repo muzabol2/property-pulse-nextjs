@@ -1,26 +1,36 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { signIn, signOut, getProviders, useSession } from "next-auth/react";
+
+import { useMediaQuery } from "@/hooks";
 import { Logo } from "./Logo";
 import { MobileMenuButton } from "./MobileMenuButton";
 import { DesktopMenu } from "./DesktopMenu";
 import { MobileMenu } from "./MobileMenu";
 import { ProfileDropdown } from "./ProfileDropdown";
 import { LoginButton } from "./LoginButton";
-import { useMediaQuery } from "@/hooks";
 
 const Navbar = () => {
+  const { data: session } = useSession();
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [providers, setProviders] = useState(null);
 
+  const profileImage = session?.user?.image;
   const pathName = usePathname();
   const isMobile = useMediaQuery("(max-width: 768px)");
 
-  const handleLogin = () => {
-    setIsLoggedIn((prev) => !prev);
-  };
+  useEffect(() => {
+    const setAuthProviders = async () => {
+      const providers = await getProviders();
+      setProviders(providers);
+    };
+
+    setAuthProviders();
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-blue-700 border-b border-blue-500 z-50">
@@ -30,17 +40,22 @@ const Navbar = () => {
 
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
             <Logo />
-            <DesktopMenu pathName={pathName} isLoggedIn={isLoggedIn} />
+            <DesktopMenu pathName={pathName} session={session} />
           </div>
 
-          {isLoggedIn ? (
+          {session ? (
             <ProfileDropdown
+              profileImage={profileImage}
               isOpen={isProfileMenuOpen}
               setIsOpen={setIsProfileMenuOpen}
-              onLogout={handleLogin}
+              signOut={signOut}
             />
           ) : (
-            <LoginButton isVisible={!isMobile} onLogin={handleLogin} />
+            <LoginButton
+              isVisible={!isMobile}
+              providers={providers}
+              signIn={signIn}
+            />
           )}
         </div>
       </div>
@@ -48,8 +63,9 @@ const Navbar = () => {
       {isMobileMenuOpen && isMobile && (
         <MobileMenu
           pathName={pathName}
-          isLoggedIn={isLoggedIn}
-          onLogin={handleLogin}
+          session={session}
+          providers={providers}
+          signIn={signIn}
         />
       )}
     </nav>

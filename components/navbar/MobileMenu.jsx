@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { LoginButton } from "./LoginButton";
 
-const MobileMenu = ({ pathName, isLoggedIn, onLogin }) => {
+const MobileMenu = ({ pathName, session, providers, signIn }) => {
   return (
     <div id="mobile-menu">
       <div className="space-y-1 px-2 pb-3 pt-2">
@@ -19,7 +19,7 @@ const MobileMenu = ({ pathName, isLoggedIn, onLogin }) => {
         >
           Properties
         </Link>
-        {isLoggedIn && (
+        {session && (
           <Link
             href="/properties/add"
             className={`text-white block rounded-md px-3 py-2 text-base font-medium ${pathName === "/properties/add" && "bg-black"}`}
@@ -28,7 +28,7 @@ const MobileMenu = ({ pathName, isLoggedIn, onLogin }) => {
           </Link>
         )}
 
-        {!isLoggedIn && <LoginButton onLogin={onLogin} />}
+        {!session && <LoginButton providers={providers} signIn={signIn} />}
       </div>
     </div>
   );

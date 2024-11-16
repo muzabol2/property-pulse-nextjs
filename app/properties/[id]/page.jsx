@@ -1,4 +1,8 @@
-import { PropertyDetails, PropertyHeaderImage } from "@/components";
+import {
+  PropertyDetails,
+  PropertyHeaderImage,
+  PropertyImages,
+} from "@/components";
 import { connectDB } from "@/config";
 import { Property } from "@/models";
 import Link from "next/link";
@@ -30,6 +34,7 @@ const PropertyPage = async ({ params }) => {
           </div>
         </div>
       </section>
+      <PropertyImages images={property.images} />
     </>
   );
 };

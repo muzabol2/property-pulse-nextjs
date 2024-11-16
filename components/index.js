@@ -1,5 +1,5 @@
 export { AuthProvider } from "./AuthProvider";
-export { Navbar } from "./navbar";
+export { Navbar } from "./Navbar_1";
 export { Footer } from "./Footer";
 export { Hero } from "./Hero";
 export { InfoBoxes } from "./InfoBoxes";

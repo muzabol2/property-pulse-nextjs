@@ -12,5 +12,6 @@ export { PropertyAddForm } from "./PropertyAddForm";
 export { PropertyCard } from "./PropertyCard";
 
 export { PropertyHeaderImage } from "./PropertyHeaderImage";
+export { BackToPropertiesButton } from "./BackToPropertiesButton";
 export { PropertyDetails } from "./PropertyDetails";
 export { PropertyImages } from "./PropertyImages";

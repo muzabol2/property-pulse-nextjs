@@ -1,4 +1,4 @@
-const ListingName = () => {
+const ListingName = ({ value }) => {
   return (
     <div className="mb-4">
       <label className="block text-gray-700 font-bold mb-2">Listing Name</label>
@@ -8,6 +8,7 @@ const ListingName = () => {
         name="name"
         className="border rounded w-full py-2 px-3 mb-2"
         placeholder="eg. Beautiful Apartment In Miami"
+        defaultValue={value}
         required
       />
     </div>

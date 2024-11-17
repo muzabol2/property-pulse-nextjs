@@ -1,4 +1,4 @@
-const PropertyType = () => {
+const PropertyType = ({ value }) => {
   return (
     <div className="mb-4">
       <label htmlFor="type" className="block text-gray-700 font-bold mb-2">
@@ -8,6 +8,7 @@ const PropertyType = () => {
         id="type"
         name="type"
         className="border rounded w-full py-2 px-3"
+        defaultValue={value}
         required
       >
         <option value="Apartment">Apartment</option>

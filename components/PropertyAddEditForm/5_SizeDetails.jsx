@@ -1,4 +1,4 @@
-const SizeDetails = () => {
+const SizeDetails = ({ property }) => {
   return (
     <div className="mb-4 flex flex-wrap">
       <div className="w-full sm:w-1/3 pr-2">
@@ -10,6 +10,7 @@ const SizeDetails = () => {
           id="beds"
           name="beds"
           className="border rounded w-full py-2 px-3"
+          defaultValue={property?.beds}
           required
         />
       </div>
@@ -22,6 +23,7 @@ const SizeDetails = () => {
           id="baths"
           name="baths"
           className="border rounded w-full py-2 px-3"
+          defaultValue={property?.baths}
           required
         />
       </div>
@@ -37,6 +39,7 @@ const SizeDetails = () => {
           id="square_feet"
           name="square_feet"
           className="border rounded w-full py-2 px-3"
+          defaultValue={property?.square_feet}
           required
         />
       </div>

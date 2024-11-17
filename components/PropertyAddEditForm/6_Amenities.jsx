@@ -18,7 +18,7 @@ const amenities = [
   { id: "grill", label: "Outdoor Grill/BBQ" },
 ];
 
-const Amenities = () => (
+const Amenities = ({ value }) => (
   <div className="mb-4">
     <label className="block text-gray-700 font-bold mb-2">Amenities</label>
     <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -29,6 +29,7 @@ const Amenities = () => (
             id={`amenity_${amenity.id}`}
             name="amenities"
             value={amenity.label}
+            defaultChecked={value?.includes(amenity.label) || false}
             className="mr-2"
           />
           <label htmlFor={`amenity_${amenity.id}`}>{amenity.label}</label>

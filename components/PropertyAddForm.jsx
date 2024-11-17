@@ -1,14 +1,15 @@
 import { addProperty } from "@/app/actions";
-
-import { PropertyType } from "./1_PropertyType";
-import { ListingName } from "./2_ListingName";
-import { Description } from "./3_Description";
-import { Location } from "./4_Location";
-import { SizeDetails } from "./5_SizeDetails";
-import { Amenities } from "./6_Amenities";
-import { CostRates } from "./7_CostRates";
-import { SellerDetails } from "./8_SellerDetails";
-import { ImagesUploader } from "./9_ImagesUploader";
+import {
+  Amenities,
+  CostRates,
+  Description,
+  ImagesUploader,
+  ListingName,
+  Location,
+  PropertyType,
+  SellerDetails,
+  SizeDetails,
+} from "./PropertyAddEditForm";
 
 const PropertyAddForm = () => {
   return (

@@ -1,4 +1,4 @@
-const CostRates = () => {
+const CostRates = ({ value }) => {
   return (
     <div className="mb-4 bg-blue-50 p-4">
       <label className="block text-gray-700 font-bold mb-2">
@@ -14,6 +14,7 @@ const CostRates = () => {
             id="weekly_rate"
             name="rates.weekly"
             className="border rounded w-full py-2 px-3"
+            defaultValue={value?.weekly}
           />
         </div>
         <div className="flex items-center">
@@ -25,6 +26,7 @@ const CostRates = () => {
             id="monthly_rate"
             name="rates.monthly"
             className="border rounded w-full py-2 px-3"
+            defaultValue={value?.monthly}
           />
         </div>
         <div className="flex items-center">
@@ -36,6 +38,7 @@ const CostRates = () => {
             id="nightly_rate"
             name="rates.nightly"
             className="border rounded w-full py-2 px-3"
+            defaultValue={value?.nightly}
           />
         </div>
       </div>

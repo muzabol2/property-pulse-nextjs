@@ -1,4 +1,4 @@
-const Description = () => {
+const Description = ({ value }) => {
   return (
     <div className="mb-4">
       <label
@@ -13,6 +13,7 @@ const Description = () => {
         className="border rounded w-full py-2 px-3"
         rows="4"
         placeholder="Add an optional description of your property"
+        defaultValue={value}
       ></textarea>
     </div>
   );

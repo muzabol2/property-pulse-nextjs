@@ -1,4 +1,4 @@
-const SellerDetails = () => {
+const SellerDetails = ({ sellerInfo }) => {
   return (
     <>
       <div className="mb-4">
@@ -11,9 +11,10 @@ const SellerDetails = () => {
         <input
           type="text"
           id="seller_name"
-          name="seller_info.name."
+          name="seller_info.name"
           className="border rounded w-full py-2 px-3"
           placeholder="Name"
+          defaultValue={sellerInfo?.name}
         />
       </div>
       <div className="mb-4">
@@ -29,6 +30,7 @@ const SellerDetails = () => {
           name="seller_info.email"
           className="border rounded w-full py-2 px-3"
           placeholder="Email address"
+          defaultValue={sellerInfo?.email}
           required
         />
       </div>
@@ -44,6 +46,7 @@ const SellerDetails = () => {
           id="seller_phone"
           name="seller_info.phone"
           className="border rounded w-full py-2 px-3"
+          defaultValue={sellerInfo?.phone}
           placeholder="Phone"
         />
       </div>

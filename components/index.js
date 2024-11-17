@@ -18,3 +18,5 @@ export { PropertyImages } from "./PropertyImages";
 
 export { ProfileInfo } from "./ProfileInfo";
 export { ProfileProperties } from "./ProfileProperties";
+
+export { PropertyEditForm } from "./PropertyEditForm";

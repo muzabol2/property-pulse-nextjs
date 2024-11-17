@@ -65,6 +65,7 @@ const Navbar = () => {
           pathName={pathName}
           session={session}
           providers={providers}
+          setIsOpen={setIsMobileMenuOpen}
           signIn={signIn}
         />
       )}

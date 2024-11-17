@@ -41,36 +41,34 @@ const PropertyCard = ({ property }) => {
         </h3>
 
         <div className="flex justify-center gap-4 text-gray-500 mb-4">
-          <p>
-            <FaBed className="lg:inline" /> {property.beds}{" "}
-            <span className="md:hidden lg:inline">Beds</span>
-          </p>
-          <p>
-            <FaBath className="lg:inline" /> {property.baths}{" "}
-            <span className="md:hidden lg:inline">Baths</span>
-          </p>
-          <p>
-            <FaRulerCombined className="lg:inline" />
-            {property.square_feet}{" "}
-            <span className="md:hidden lg:inline">sqft</span>
-          </p>
+          {[
+            { icon: FaBed, value: property.beds, label: "Beds" },
+            { icon: FaBath, value: property.baths, label: "Baths" },
+            {
+              icon: FaRulerCombined,
+              value: property.square_feet,
+              label: "sqft",
+            },
+          ].map(({ icon: Icon, value, label }) => (
+            <p key={label}>
+              <Icon className="lg:inline" /> {value}
+              <span className="md:hidden lg:inline"> {label}</span>
+            </p>
+          ))}
         </div>
 
         <div className="flex justify-center gap-4 text-green-900 text-sm mb-4">
-          {rates.nightly && (
-            <p>
-              <FaMoneyBill className="inline" /> Nightly
-            </p>
-          )}
-          {rates.weekly && (
-            <p>
-              <FaMoneyBill className="inline" /> Weekly
-            </p>
-          )}
-          {rates.monthly && (
-            <p>
-              <FaMoneyBill className="inline" /> Monthly
-            </p>
+          {[
+            { label: "Nightly", rate: rates.nightly },
+            { label: "Weekly", rate: rates.weekly },
+            { label: "Monthly", rate: rates.monthly },
+          ].map(
+            ({ label, rate }) =>
+              rate && (
+                <p key={label}>
+                  <FaMoneyBill className="inline" /> {label}
+                </p>
+              )
           )}
         </div>
 

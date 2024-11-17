@@ -16,4 +16,5 @@ export { BackToPropertiesButton } from "./BackToPropertiesButton";
 export { PropertyDetails } from "./PropertyDetails";
 export { PropertyImages } from "./PropertyImages";
 
+export { ProfileInfo } from "./ProfileInfo";
 export { ProfileProperties } from "./ProfileProperties";

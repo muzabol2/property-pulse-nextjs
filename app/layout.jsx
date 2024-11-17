@@ -1,4 +1,7 @@
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "@/assets/styles/globals.css";
+
 import { AuthProvider, Footer, Navbar } from "@/components";
 
 export const metadata = {
@@ -14,6 +17,7 @@ const RootLayout = ({ children }) => {
           <Navbar />
           <main className="pt-20">{children}</main>
           <Footer />
+          <ToastContainer />
         </body>
       </html>
     </AuthProvider>

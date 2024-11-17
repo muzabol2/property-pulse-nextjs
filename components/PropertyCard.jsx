@@ -9,8 +9,9 @@ import {
 } from "react-icons/fa";
 
 const PropertyCard = ({ property }) => {
+  const { rates } = property;
+
   const getRateDisplay = () => {
-    const { rates } = property;
     if (rates.monthly) {
       return `$${rates.monthly}/mo`;
     } else if (rates.weekly) {
@@ -56,12 +57,21 @@ const PropertyCard = ({ property }) => {
         </div>
 
         <div className="flex justify-center gap-4 text-green-900 text-sm mb-4">
-          <p>
-            <FaMoneyBill className="inline" /> Weekly
-          </p>
-          <p>
-            <FaMoneyBill className="inline" /> Monthly
-          </p>
+          {rates.nightly && (
+            <p>
+              <FaMoneyBill className="inline" /> Nightly
+            </p>
+          )}
+          {rates.weekly && (
+            <p>
+              <FaMoneyBill className="inline" /> Weekly
+            </p>
+          )}
+          {rates.monthly && (
+            <p>
+              <FaMoneyBill className="inline" /> Monthly
+            </p>
+          )}
         </div>
 
         <div className="border border-gray-100 mb-5"></div>

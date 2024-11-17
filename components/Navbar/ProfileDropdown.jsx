@@ -33,12 +33,14 @@ const ProfileDropdown = ({ profileImage, isOpen, setIsOpen, signOut }) => {
               <Link
                 href="/profile"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                onClick={() => setIsOpen(false)}
               >
                 Your Profile
               </Link>
               <Link
                 href="/properties/saved"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                onClick={() => setIsOpen(false)}
               >
                 Saved Properties
               </Link>

@@ -15,3 +15,5 @@ export { PropertyHeaderImage } from "./PropertyHeaderImage";
 export { BackToPropertiesButton } from "./BackToPropertiesButton";
 export { PropertyDetails } from "./PropertyDetails";
 export { PropertyImages } from "./PropertyImages";
+
+export { ProfileProperties } from "./ProfileProperties";

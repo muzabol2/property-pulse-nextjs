@@ -1,7 +1,7 @@
 import { Summary } from "./1_Summary";
 import { Details } from "./2_Details";
 import { Amenities } from "./3_Amenities";
-import { Map } from "./4_Map";
+import { MapLocation } from "./4_MapLocation";
 
 const PropertyDetails = ({ property }) => {
   return (
@@ -12,7 +12,7 @@ const PropertyDetails = ({ property }) => {
             <Summary property={property} />
             <Details property={property} />
             <Amenities amenities={property.amenities} />
-            <Map property={property} />
+            <MapLocation property={property} />
           </main>
         </div>
       </div>

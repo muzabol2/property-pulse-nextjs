@@ -1,8 +1,9 @@
 import { FaBed, FaBath, FaRulerCombined } from "react-icons/fa";
+import { Card } from "./Card";
 
 const Details = ({ property }) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md mt-6">
+    <Card>
       <h3 className="text-lg font-bold mb-6">Description & Details</h3>
       <div className="flex justify-center gap-4 text-blue-500 mb-4 text-xl space-x-9">
         <p>
@@ -19,7 +20,7 @@ const Details = ({ property }) => {
         </p>
       </div>
       <p className="text-gray-500 mb-4">{property.description}</p>
-    </div>
+    </Card>
   );
 };
 

@@ -1,11 +1,13 @@
 "use client";
 
+import { Spinner } from "@/components/Spinner";
+
 const LoadingPage = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-full space-y-2">
-      <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-opacity-50" />
-      <p className="text-base text-gray-700">Loading...</p>
+    <div className="flex flex-col justify-center items-center flex-grow pt-20 pb-20">
+      <Spinner />
     </div>
   );
 };
+
 export default LoadingPage;

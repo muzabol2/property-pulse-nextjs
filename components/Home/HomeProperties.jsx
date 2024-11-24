@@ -1,4 +1,4 @@
-import { PropertyCard } from "./PropertyCard";
+import { PropertyCard } from "@/components/common";
 import Link from "next/link";
 import { connectDB } from "@/config";
 import { Property } from "@/models";

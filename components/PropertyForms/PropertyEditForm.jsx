@@ -8,7 +8,7 @@ import {
   PropertyType,
   SellerDetails,
   SizeDetails,
-} from "./PropertyAddEditForm";
+} from "./PropertyAddEdit";
 
 const PropertyEditForm = ({ property }) => {
   const updatePropertyById = updateProperty.bind(null, property._id);

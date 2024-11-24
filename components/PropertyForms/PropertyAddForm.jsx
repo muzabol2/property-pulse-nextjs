@@ -9,7 +9,7 @@ import {
   PropertyType,
   SellerDetails,
   SizeDetails,
-} from "./PropertyAddEditForm";
+} from "./PropertyAddEdit";
 
 const PropertyAddForm = () => {
   return (

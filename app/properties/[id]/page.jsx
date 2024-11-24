@@ -1,9 +1,4 @@
-import {
-  BackToPropertiesButton,
-  PropertyDetails,
-  PropertyHeaderImage,
-  PropertyImages,
-} from "@/components";
+import { PropertyInfo } from "@/components";
 import { connectDB } from "@/config";
 import { Property } from "@/models";
 import { convertToSerializableObject } from "@/utils";
@@ -21,14 +16,7 @@ const PropertyPage = async ({ params }) => {
     );
   }
 
-  return (
-    <>
-      <PropertyHeaderImage image={property.images[0]} />
-      <BackToPropertiesButton />
-      <PropertyDetails property={property} />
-      <PropertyImages images={property.images} />
-    </>
-  );
+  return <PropertyInfo property={property} />;
 };
 
 export default PropertyPage;

@@ -1,4 +1,4 @@
-import { PropertySearchForm } from "../common";
+import { PropertySearchForm } from "@/components/common";
 
 const Hero = () => {
   return (

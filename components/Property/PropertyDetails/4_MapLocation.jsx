@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Spinner } from "../../common/Spinner";
+import { Spinner } from "@/components/common";
 import { Card } from "./Card";
 import { useMapHelpers } from "./useMapHelpers";
 import Map, { Marker } from "react-map-gl";

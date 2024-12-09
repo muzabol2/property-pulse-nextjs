@@ -1,3 +1,5 @@
+"use client";
+
 import { addProperty } from "@/app/actions";
 import {
   Amenities,
@@ -10,10 +12,33 @@ import {
   SellerDetails,
   SizeDetails,
 } from "./PropertyAddEdit";
+import { useState } from "react";
+import { Spinner } from "@/components/common";
 
 const PropertyAddForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    const formData = new FormData(e.target);
+
+    try {
+      await addProperty(formData);
+    } catch (error) {
+      console.error("Error adding property:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  if (isLoading) {
+    return <Spinner />;
+  }
+
   return (
-    <form action={addProperty}>
+    <form onSubmit={handleSubmit}>
       <h2 className="text-3xl text-center font-semibold mb-6">Add Property</h2>
       <PropertyType />
       <ListingName />

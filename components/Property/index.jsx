@@ -1,7 +1,7 @@
 import { BookmarkButton } from "./BookmarkButton";
 import { PropertyContactForm } from "./PropertyContactForm";
 import { ShareButtons } from "./ShareButtons";
-import { BackToPropertiesButton } from "./BackToPropertiesButton";
+import { BackToPropertiesButton } from "../common";
 import { Summary } from "./PropertyDetails/1_Summary";
 import { Details } from "./PropertyDetails/2_Details";
 import { Amenities } from "./PropertyDetails/3_Amenities";

@@ -8,6 +8,7 @@ import {
   PropertyType,
   SellerDetails,
   SizeDetails,
+  SubmitPropertyButton,
 } from "./PropertyAddEdit";
 
 const PropertyEditForm = ({ property }) => {
@@ -25,12 +26,10 @@ const PropertyEditForm = ({ property }) => {
       <CostRates value={property.rates} />
       <SellerDetails sellerInfo={property.seller_info} />
 
-      <button
-        className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
-        type="submit"
-      >
-        Edit Property
-      </button>
+      <SubmitPropertyButton
+        defaultText="Edit Property"
+        pendingText="Editing..."
+      />
     </form>
   );
 };

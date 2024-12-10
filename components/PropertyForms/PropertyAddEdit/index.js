@@ -7,3 +7,4 @@ export * from "./6_Amenities";
 export * from "./7_CostRates";
 export * from "./8_SellerDetails";
 export * from "./9_ImagesUploader";
+export * from "./SubmitPropertyButton";

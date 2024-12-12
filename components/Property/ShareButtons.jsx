@@ -1,5 +1,6 @@
 "use client";
 
+import { NEXT_PUBLIC_DOMAIN } from "@/constants";
 import {
   EmailIcon,
   EmailShareButton,
@@ -12,7 +13,7 @@ import {
 } from "react-share";
 
 const ShareButtons = ({ property }) => {
-  const shareUrl = `${process.env.NEXT_PUBLIC_DOMAIN}/properties/${property._id}`;
+  const shareUrl = `${NEXT_PUBLIC_DOMAIN}/properties/${property._id}`;
 
   return (
     <>
